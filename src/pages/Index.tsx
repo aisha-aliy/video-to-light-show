@@ -28,34 +28,34 @@ const Index = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="container mx-auto px-6 pt-32 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+      <section className="container mx-auto px-4 sm:px-6 pt-24 sm:pt-32 pb-12 sm:pb-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          <div className="space-y-6 sm:space-y-8">
             <Badge variant="outline" className="rounded-full border-primary/20">
               <Zap className="h-3 w-3 mr-1" />
               Now Available in Nigeria
             </Badge>
             
             <div>
-              <h1 className="text-5xl lg:text-6xl font-bold mb-4">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4">
                 Banking for <br />
-                <span className="text-primary">Everyone</span>
+                <span className="text-primary text-glow">Everyone</span>
               </h1>
-              <p className="text-lg text-muted-foreground">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 Send money, pay bills, save & invest with our all-in-one payment platform built for Nigerians.
               </p>
             </div>
 
-            <div className="flex gap-4">
-              <Button size="lg" className="rounded-full bg-primary hover:bg-primary/90">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button size="lg" className="rounded-full gradient-primary-pink hover:opacity-90 button-glow w-full sm:w-auto">
                 Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-              <Button size="lg" variant="outline" className="rounded-full">
+              <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto">
                 App Coming Soon
               </Button>
             </div>
 
-            <div className="flex gap-6">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-6">
               <div className="flex items-center gap-2 px-4 py-2 bg-secondary rounded-full">
                 <Zap className="h-4 w-4 text-primary" />
                 <span className="text-sm font-medium">Instant Transfers</span>
@@ -68,60 +68,60 @@ const Index = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary to-primary/60 rounded-3xl p-8 relative overflow-hidden">
-              <div className="absolute top-8 left-8 bg-background/10 backdrop-blur-sm rounded-lg px-4 py-2">
+            <div className="bg-gradient-to-br from-primary to-primary/60 rounded-3xl p-6 sm:p-8 relative overflow-hidden">
+              <div className="absolute top-4 sm:top-8 left-4 sm:left-8 bg-background/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2">
                 <div className="text-xs text-white/80">Transfer Successful</div>
-                <div className="text-2xl font-bold text-white">₦50,000</div>
+                <div className="text-xl sm:text-2xl font-bold text-white">₦50,000</div>
               </div>
-              <div className="h-96 flex items-end justify-center">
-                <div className="w-64 h-80 bg-background/10 backdrop-blur-sm rounded-2xl" />
+              <div className="h-64 sm:h-96 flex items-end justify-center">
+                <div className="w-48 sm:w-64 h-56 sm:h-80 bg-background/10 backdrop-blur-sm rounded-2xl" />
               </div>
-              <div className="absolute bottom-8 right-8 bg-background/10 backdrop-blur-sm rounded-lg px-4 py-3">
+              <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-background/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3">
                 <div className="text-xs text-white/80">Monthly Savings</div>
-                <div className="text-xl font-bold text-white">₦2.5M</div>
+                <div className="text-lg sm:text-xl font-bold text-white">₦2.5M</div>
                 <div className="text-xs text-success">+16% this month</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-20 text-center">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-20 text-center">
           <div>
-            <div className="text-4xl font-bold mb-2">Free</div>
-            <div className="text-sm text-muted-foreground">POS Terminals</div>
+            <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">Free</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">POS Terminals</div>
           </div>
           <div>
-            <div className="text-4xl font-bold mb-2">0%</div>
-            <div className="text-sm text-muted-foreground">Setup Fees</div>
+            <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">0%</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Setup Fees</div>
           </div>
           <div>
-            <div className="text-4xl font-bold mb-2">Instant</div>
-            <div className="text-sm text-muted-foreground">Account Opening</div>
+            <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">Instant</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Account Opening</div>
           </div>
           <div>
-            <div className="text-4xl font-bold mb-2">24/7</div>
-            <div className="text-sm text-muted-foreground">Support</div>
+            <div className="text-2xl sm:text-4xl font-bold mb-1 sm:mb-2">24/7</div>
+            <div className="text-xs sm:text-sm text-muted-foreground">Support</div>
           </div>
         </div>
 
-        <div className="text-center mt-12 text-sm text-muted-foreground">
+        <div className="text-center mt-8 sm:mt-12 text-xs sm:text-sm text-muted-foreground">
           Powered by <span className="text-primary font-medium">Stripe and Flutterwave</span>
         </div>
       </section>
 
       {/* All-in-One Platform Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="text-center mb-12">
+      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="text-center mb-8 sm:mb-12">
           <Badge variant="outline" className="rounded-full mb-4">All-in-One Platform</Badge>
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4">
-            Everything you need, <span className="text-primary">one app</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
+            Everything you need, <span className="text-primary text-glow">one app</span>
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-4">
             From everyday payments to business growth, Paychipa has you covered
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           <Card className="p-6 hover:border-primary transition-colors">
             <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center mb-4">
               <Zap className="h-6 w-6 text-foreground" />
@@ -215,8 +215,8 @@ const Index = () => {
       </section>
 
       {/* POS Terminals Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="bg-secondary rounded-3xl p-12 aspect-square flex items-center justify-center">
               <div className="text-center text-muted-foreground">POS Terminal Image</div>
@@ -258,8 +258,8 @@ const Index = () => {
       </section>
 
       {/* Smart Cards Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-6">
             <Badge variant="outline" className="rounded-full">Smart Cards</Badge>
             <h2 className="text-4xl lg:text-5xl font-bold">
@@ -333,8 +333,8 @@ const Index = () => {
       </section>
 
       {/* Personal Banking Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-6">
             <Badge variant="outline" className="rounded-full">Personal Banking</Badge>
             <h2 className="text-4xl lg:text-5xl font-bold">
@@ -376,8 +376,8 @@ const Index = () => {
       </section>
 
       {/* Escrow Protection Section */}
-      <section className="container mx-auto px-6 py-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
+        <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="order-2 lg:order-1">
             <div className="bg-gradient-to-br from-primary/20 to-purple-600/20 rounded-3xl p-12 aspect-square flex items-center justify-center relative">
               <div className="text-center space-y-6">
