@@ -21,6 +21,10 @@ import {
   Star,
   Check
 } from "lucide-react";
+import heroImage from "@/assets/hero-image.png";
+import posTerminal from "@/assets/pos-terminal.png";
+import smartCard from "@/assets/smart-card.png";
+import personalBanking from "@/assets/personal-banking.png";
 
 const Index = () => {
   return (
@@ -68,19 +72,12 @@ const Index = () => {
           </div>
 
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary to-primary/60 rounded-3xl p-6 sm:p-8 relative overflow-hidden">
-              <div className="absolute top-4 sm:top-8 left-4 sm:left-8 bg-background/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2">
-                <div className="text-xs text-white/80">Transfer Successful</div>
-                <div className="text-xl sm:text-2xl font-bold text-white">₦50,000</div>
-              </div>
-              <div className="h-64 sm:h-96 flex items-end justify-center">
-                <div className="w-48 sm:w-64 h-56 sm:h-80 bg-background/10 backdrop-blur-sm rounded-2xl" />
-              </div>
-              <div className="absolute bottom-4 sm:bottom-8 right-4 sm:right-8 bg-background/10 backdrop-blur-sm rounded-lg px-3 sm:px-4 py-2 sm:py-3">
-                <div className="text-xs text-white/80">Monthly Savings</div>
-                <div className="text-lg sm:text-xl font-bold text-white">₦2.5M</div>
-                <div className="text-xs text-success">+16% this month</div>
-              </div>
+            <div className="rounded-3xl overflow-hidden">
+              <img 
+                src={heroImage} 
+                alt="Person excited about banking with Paychipa" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -218,8 +215,12 @@ const Index = () => {
       <section className="container mx-auto px-4 sm:px-6 py-12 sm:py-20">
         <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-secondary rounded-3xl p-12 aspect-square flex items-center justify-center">
-              <div className="text-center text-muted-foreground">POS Terminal Image</div>
+            <div className="rounded-3xl overflow-hidden bg-secondary">
+              <img 
+                src={posTerminal} 
+                alt="POS terminal for business payments" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 
@@ -325,8 +326,12 @@ const Index = () => {
           </div>
 
           <div className="order-first lg:order-last">
-            <div className="bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-3xl p-12 aspect-square flex items-center justify-center">
-              <div className="text-center text-muted-foreground">Card Image</div>
+            <div className="rounded-3xl overflow-hidden bg-gradient-to-br from-primary/20 to-blue-500/20">
+              <img 
+                src={smartCard} 
+                alt="Premium contactless payment card" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
@@ -368,8 +373,12 @@ const Index = () => {
           </div>
 
           <div className="order-first lg:order-last">
-            <div className="bg-secondary rounded-3xl p-12 aspect-square flex items-center justify-center">
-              <div className="text-center text-muted-foreground">Personal Banking Image</div>
+            <div className="rounded-3xl overflow-hidden bg-secondary">
+              <img 
+                src={personalBanking} 
+                alt="Happy customer using Paychipa personal banking" 
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
