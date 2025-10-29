@@ -25,8 +25,13 @@ import heroImage from "@/assets/hero-image.png";
 import posTerminal from "@/assets/pos-terminal.png";
 import smartCard from "@/assets/smart-card.png";
 import personalBanking from "@/assets/personal-banking.png";
+import logo from "@/assets/logo.png";
+import { useState } from "react";
+import { WaitlistDialog } from "@/components/WaitlistDialog";
 
 const Index = () => {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
+  
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -51,7 +56,11 @@ const Index = () => {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
-              <Button size="lg" className="rounded-full gradient-primary-pink hover:opacity-90 button-glow w-full sm:w-auto">
+              <Button 
+                size="lg" 
+                onClick={() => setWaitlistOpen(true)}
+                className="rounded-full gradient-primary-pink hover:opacity-90 button-glow w-full sm:w-auto"
+              >
                 Join Waitlist <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
               <Button size="lg" variant="outline" className="rounded-full w-full sm:w-auto">
@@ -636,7 +645,7 @@ const Index = () => {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 text-xl font-bold mb-4">
-                <span className="text-primary">P</span>
+                <img src={logo} alt="Paychipa Logo" className="w-10 h-10" />
                 <span>Paychipa</span>
               </div>
               <p className="text-sm text-muted-foreground mb-6">
@@ -712,6 +721,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </div>
   );
 };
