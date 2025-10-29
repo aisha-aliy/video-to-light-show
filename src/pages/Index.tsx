@@ -79,6 +79,35 @@ const Index = () => {
                 className="w-full h-full object-cover"
               />
             </div>
+            
+            {/* Floating text boxes with bounce animations */}
+            <div className="absolute -top-4 -left-4 bg-card border border-border rounded-xl px-4 py-2 shadow-lg bounce-float-1 hidden sm:block">
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-success rounded-full animate-pulse"></div>
+                <span className="text-sm font-medium">₦0 Transfer Fee</span>
+              </div>
+            </div>
+            
+            <div className="absolute top-1/4 -right-4 bg-card border border-border rounded-xl px-4 py-2 shadow-lg bounce-float-2 hidden md:block">
+              <div className="flex items-center gap-2">
+                <Star className="h-4 w-4 text-primary fill-primary" />
+                <span className="text-sm font-medium">15% Interest</span>
+              </div>
+            </div>
+            
+            <div className="absolute -bottom-4 left-1/4 bg-card border border-border rounded-xl px-4 py-2 shadow-lg bounce-float-3 hidden sm:block">
+              <div className="flex items-center gap-2">
+                <Zap className="h-4 w-4 text-accent" />
+                <span className="text-sm font-medium">Instant Setup</span>
+              </div>
+            </div>
+            
+            <div className="absolute bottom-1/3 -left-6 bg-card border border-border rounded-xl px-4 py-2 shadow-lg bounce-float-4 hidden lg:block">
+              <div className="flex items-center gap-2">
+                <Shield className="h-4 w-4 text-success" />
+                <span className="text-sm font-medium">Bank Grade Security</span>
+              </div>
+            </div>
           </div>
         </div>
 
