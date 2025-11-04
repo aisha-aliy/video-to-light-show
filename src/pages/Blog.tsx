@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
-import logo from "@/assets/logo.png";
+import { Footer } from "@/components/Footer";
 
 const featuredPost = {
   id: 1,
@@ -202,20 +202,7 @@ export default function Blog() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 px-4 sm:px-6">
-        <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <div className="flex items-center gap-2 text-lg font-bold">
-              <img src={logo} alt="Paychipa Logo" className="w-8 h-8" />
-              <span>Paychipa</span>
-            </div>
-            <p className="text-sm text-muted-foreground text-center md:text-left">
-              © 2024 Paychipa. Making African finance smarter and safer.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </div>

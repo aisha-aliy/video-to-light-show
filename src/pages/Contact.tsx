@@ -6,9 +6,9 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import { Footer } from "@/components/Footer";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -73,13 +73,7 @@ const Contact = () => {
         </div>
       </section>
 
-      <footer className="border-t border-border bg-card mt-20">
-        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-            <p>© 2024 Paychipa. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

@@ -14,15 +14,11 @@ import {
   BarChart3,
   FileText,
   Globe,
-  Smartphone,
-  Instagram,
-  Twitter,
-  Linkedin,
-  Facebook
+  Smartphone
 } from "lucide-react";
-import logo from "@/assets/logo.png";
 import { useState } from "react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
+import { Footer } from "@/components/Footer";
 
 const BusinessAccount = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
@@ -256,68 +252,7 @@ const BusinessAccount = () => {
         </Card>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-card mt-20">
-        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-            <div className="col-span-2 md:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <img src={logo} alt="Paychipa Logo" className="w-8 h-8" />
-                <span className="text-lg font-bold">Paychipa</span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                Next-generation fintech platform for Africa.
-              </p>
-              <div className="flex gap-3">
-                <a href="#" className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <Instagram className="h-4 w-4" />
-                </a>
-                <a href="#" className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <Twitter className="h-4 w-4" />
-                </a>
-                <a href="#" className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <Linkedin className="h-4 w-4" />
-                </a>
-                <a href="#" className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center hover:bg-primary transition-colors">
-                  <Facebook className="h-4 w-4" />
-                </a>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-3 text-sm">Products</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/personal-account" className="hover:text-primary transition-colors">Personal Account</a></li>
-                <li><a href="/business-account" className="hover:text-primary transition-colors">Business Account</a></li>
-                <li><a href="/pos-terminals" className="hover:text-primary transition-colors">POS Terminals</a></li>
-                <li><a href="/cards" className="hover:text-primary transition-colors">Cards</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-3 text-sm">Company</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/about" className="hover:text-primary transition-colors">About Us</a></li>
-                <li><a href="/careers" className="hover:text-primary transition-colors">Careers</a></li>
-                <li><a href="/blog" className="hover:text-primary transition-colors">Blog</a></li>
-                <li><a href="/press" className="hover:text-primary transition-colors">Press</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-bold mb-3 text-sm">Support</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="/help-center" className="hover:text-primary transition-colors">Help Center</a></li>
-                <li><a href="/contact" className="hover:text-primary transition-colors">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-            <p>© 2024 Paychipa. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </div>

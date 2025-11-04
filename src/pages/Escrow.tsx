@@ -2,10 +2,10 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Shield, Users, CheckCircle2, Clock, ArrowRight, Check, Instagram, Twitter, Linkedin, Facebook } from "lucide-react";
-import logo from "@/assets/logo.png";
+import { Shield, Users, CheckCircle2, Clock, ArrowRight, Check } from "lucide-react";
 import { useState } from "react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
+import { Footer } from "@/components/Footer";
 
 const Escrow = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
@@ -70,21 +70,7 @@ const Escrow = () => {
         </Card>
       </section>
 
-      <footer className="border-t border-border bg-card mt-20">
-        <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
-            <div className="col-span-2 md:col-span-1">
-              <div className="flex items-center gap-2 mb-4">
-                <img src={logo} alt="Paychipa Logo" className="w-8 h-8" />
-                <span className="text-lg font-bold">Paychipa</span>
-              </div>
-            </div>
-          </div>
-          <div className="border-t border-border pt-6 text-center text-sm text-muted-foreground">
-            <p>© 2024 Paychipa. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
 
       <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </div>

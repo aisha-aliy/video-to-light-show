@@ -28,6 +28,8 @@ import personalBanking from "@/assets/personal-banking.png";
 import logo from "@/assets/logo.png";
 import { useState } from "react";
 import { WaitlistDialog } from "@/components/WaitlistDialog";
+import { Footer } from "@/components/Footer";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
@@ -639,88 +641,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-border bg-card">
-        <div className="container mx-auto px-6 py-12">
-          <div className="grid md:grid-cols-4 gap-8 mb-8">
-            <div>
-              <div className="flex items-center gap-2 text-xl font-bold mb-4">
-                <img src={logo} alt="Paychipa Logo" className="w-10 h-10" />
-                <span>Paychipa</span>
-              </div>
-              <p className="text-sm text-muted-foreground mb-6">
-                Making payments simple and accessible for everyone in Nigeria. Bank smarter with Paychipa.
-              </p>
-              <div className="flex gap-3">
-                <button className="w-9 h-9 rounded-full border border-border hover:border-primary hover:text-primary transition-colors flex items-center justify-center">
-                  <Facebook className="h-4 w-4" />
-                </button>
-                <button className="w-9 h-9 rounded-full border border-border hover:border-primary hover:text-primary transition-colors flex items-center justify-center">
-                  <Twitter className="h-4 w-4" />
-                </button>
-                <button className="w-9 h-9 rounded-full border border-border hover:border-primary hover:text-primary transition-colors flex items-center justify-center">
-                  <Instagram className="h-4 w-4" />
-                </button>
-                <button className="w-9 h-9 rounded-full border border-border hover:border-primary hover:text-primary transition-colors flex items-center justify-center">
-                  <Linkedin className="h-4 w-4" />
-                </button>
-              </div>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Products</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Personal Account</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Business Account</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">POS Terminals</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Cards</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Savings</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Loans</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Escrow</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Careers</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Blog</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Press</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contact</a></li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-semibold mb-4">Contact</h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li className="flex items-start gap-2">
-                  <span>✉️</span>
-                  <span>hello@paychipa.com</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span>📞</span>
-                  <span>+234 901 234 5678</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span>📍</span>
-                  <span>Abuja, Nigeria</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-            <div>© 2025 Paychipa. All rights reserved.</div>
-            <div className="flex gap-6">
-              <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-primary transition-colors">Security</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       
       <WaitlistDialog open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </div>
